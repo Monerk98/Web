@@ -1,0 +1,111 @@
+.guarantee .container {
+  padding: 0;
+  padding-bottom: 50px;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.guarantee {
+  padding-top: 27px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 0px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    padding-top: 0px;
+  }
+
+  &__container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__accent {
+    color: $third-color;
+  }
+
+  &__title {
+    color: $new-color;
+    font-weight: $fw-black;
+    font-size: 26px;
+    line-height: 1.26;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1366px) {
+      font-size: 46px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    padding: 50px 20px 50px 18px;
+    position: relative;
+    list-style: none;
+    background-color: #f1f1f1;
+    font-weight: $fw-medium;
+    font-size: 12px;
+    line-height: 1.66;
+    color: $fire-fill-color;
+    box-shadow: 0px 8px 26px rgba(0, 0, 0, 1.1);
+    border-radius: 50px;
+    @media screen and (min-width: 768px) {
+      padding-right: 50px;
+      padding-left: 79px;
+    }
+
+    @media screen and (min-width: 1366px) {
+      padding: 54px 114px 45px;
+      font-size: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    padding-left: 20px;
+    letter-spacing: 0.06px;
+
+    @media screen and (min-width: 768px) {
+      padding-left: 32px;
+    }
+
+    @media screen and (min-width: 1366px) {
+      padding-left: 40px;
+    }
+
+    &:not(:last-child) {
+      border-left: 1px dashed $secondary-color;
+      padding-bottom: 23px;
+
+      @media screen and (min-width: 768px) {
+        padding-bottom: 20px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      left: 12px;
+      content: '';
+      width: 15px;
+      height: 20px;
+      background: url('../images/guarantee/fire.svg');
+      background-repeat: no-repeat;
+
+      @media screen and (min-width: 768px) {
+        left: 73px;
+      }
+
+      @media screen and (min-width: 1366px) {
+        left: 108px;
+        width: 22.49px;
+        height: 29.6px;
+      }
+    }
+  }
+}

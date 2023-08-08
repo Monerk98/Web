@@ -1,0 +1,179 @@
+.problems {
+  padding: 25px 0 50px 0;
+  background-image: linear-gradient($pur-color 72%, $pur-color 0%);
+
+  @media (min-width: 768px) {
+    background-image: linear-gradient($pur-color 62%, $pur-color 0%);
+    padding: 60px 0 50px 0;
+  }
+  @media (min-width: 1366px) {
+    background-image: linear-gradient($pur-color 66%, $pur-color 0%);
+    position: relative;
+    min-height: 840px;
+    padding: 100px 0 130px 0;
+  }
+}
+/* ------------------------- Катринка на заднем фоне ------------------------ */
+.problems__bg-icon {
+  @media (min-width: 1366px) {
+    position: absolute;
+    width: 407px;
+    height: 475px;
+
+    bottom: 284px;
+    right: 130px;
+    background-repeat: no-repeat;
+
+    background-image: url(../images/problems/fire.svg);
+  }
+}
+/* -------------------------------- Заголовок ------------------------------- */
+
+.problems__title {
+  font-weight: $fw-black;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+
+  color: $front-color;
+
+  @media (max-width: 320px) {
+    font-size: calc(4px + 6vw);
+  }
+
+  @media (max-width: 767px) {
+    margin: 0 auto 25px;
+    max-width: 280px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 25px;
+    width: 425px;
+  }
+  @media (min-width: 1366px) {
+    margin-bottom: 70px;
+    width: 866px;
+
+    font-size: 46px;
+    line-height: 1.3;
+  }
+}
+
+.text-wrapping {
+  display: block;
+}
+
+.accent-text {
+  color: $third-color;
+}
+/* -------------------------------- Контент ------------------------------- */
+.problems__list {
+  margin: 0 auto;
+
+  height: 510px;
+
+  background: $front-color;
+  border-radius: 50px;
+  // box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 8px 26px rgba(0, 0, 0, 1.1);
+
+  padding: 19px 20px 19px 31px;
+
+  font-weight: $fw-bold;
+  line-height: 1.71;
+
+  @media (max-width: 767px) {
+    margin: 0 auto;
+    max-width: 280px;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 26px 113px 30px 96px;
+    height: 303px;
+  }
+
+  @media (min-width: 1366px) {
+    position: absolute;
+    bottom: 128px;
+
+    width: 1314px;
+    height: 362px;
+    padding: 70px 113px 62px 113px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.problems__item {
+  display: flex;
+  flex-direction: column;
+  counter-increment: counter 0;
+
+  @media (min-width: 768px) {
+    max-width: 210px;
+    height: 70px;
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+  @media (min-width: 1366px) {
+    max-width: 336px;
+    height: 100px;
+    flex-basis: calc((100% - 2 * 30px) / 3);
+  }
+}
+
+.problems__item:not(:last-child) {
+  @media (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+}
+
+.problems__item::before {
+  counter-increment: counter;
+  content: '— 0' counter(counter);
+
+  margin-bottom: 5px;
+
+  font-weight: $fw-bold;
+  line-height: 1.65;
+
+  color: $third-color;
+}
+
+// ==================style for button========================
+
+button.up {
+  display: none;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #ff6b09;
+  border: solid 1px;
+  border-color: #ff6b09;
+  font-weight: bold;
+  position: fixed;
+  z-index: 999;
+  right: -100px;
+  bottom: 20px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  transform: scale(1);
+  box-shadow: 0 0 5px 5px rgba(34, 60, 80, 0.2);
+  transition: box-shadow 0.5s, transform 0.5s;
+  &:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px 7px rgba(34, 60, 80, 0.2);
+    transition: box-shadow 0.5s, transform 0.5s;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  button.up {
+    display: block;
+  }
+}
